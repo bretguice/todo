@@ -1,0 +1,64 @@
+/* CONTROLS TABLE LOOK*/
+
+.todo-container {
+  display: flex;
+  justify-content: center;
+}
+
+.table-section {
+  overflow-y: auto;
+  height: auto;
+  max-height: 475px;
+  max-width: 1000px;
+  display: block;
+  background-color: var(--secondary-color);
+}
+
+th,
+td {
+  padding: 0 1rem 0 1rem;
+  min-width: 5rem;
+  max-width: 20rem;
+  text-align: center;
+}
+
+td {
+  overflow-wrap: anywhere;
+}
+
+th {
+  position: sticky;
+}
+tr:nth-child(even) {
+  background-color: var(--primary-color);
+}
+
+tr:nth-child(odd),
+#header {
+  background-color: var(--alt-primary);
+}
+/* CREATED BUTTONS*/
+.trash-button,
+.complete-button,
+.notes-button {
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+  padding: 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.trash-button:hover {
+  background-color: firebrick;
+  color: var(--secondary-color);
+}
+
+.complete-button:hover {
+  background-color: greenyellow;
+  color: var(--secondary-color);
+}
+
+.notes-button:hover {
+  background-color: var(--active-color);
+  color: var(--secondary-color);
+}

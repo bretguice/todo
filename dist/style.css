@@ -1,0 +1,187 @@
+:root {
+  --primary-color: dodgerblue;
+  --secondary-color: white;
+  --active-color: orange;
+  --alt-primary: rgba(30, 144, 255, 0.7);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+header {
+  font-size: 1.5rem;
+}
+
+header,
+form {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form input,
+form button {
+  padding: 0.5rem;
+  font-size: 2rem;
+  border: none;
+  background: var(--secondary-color);
+}
+
+form button {
+  color: var(--primary-color);
+  background: var(--secondary-color);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+form button:hover {
+  background: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+#edit-screen {
+  height: 100%;
+  width: 100%;
+  visibility: hidden;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.edit-textarea {
+  position: relative;
+  width: 100%;
+}
+.edit-date,
+.edit-priortiy {
+  position: relative;
+  width: 50%;
+}
+
+.edit-buttons {
+  font-size: 1.5rem;
+}
+
+.edit-buttons:hover {
+  cursor: pointer;
+}
+
+#todo-description {
+  padding: 15px;
+  font-size: 17px;
+  border: none;
+  float: left;
+  width: 80%;
+  background: var(--secondary-color);
+}
+
+.todo-container {
+  display: block;
+  /* margin: 0 auto;*/
+  width: 100vw;
+}
+
+.view-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Fix scrolling on table*/
+.scroll {
+  position: fixed;
+  margin: auto;
+  overflow: auto;
+  /*vertical-align: top;*/
+
+  background-color: var(--secondary-color);
+}
+
+.todo {
+  margin: 0.5rem;
+  background: var(--secondary-color);
+  color: black;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.view-button {
+  font-size: 2rem;
+  padding: 0.5rem;
+  border: none;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+.active {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+.view-button:hover {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  cursor: pointer;
+}
+
+.todo li {
+  flex: 1;
+}
+
+.trash-button,
+.complete-button,
+.notes-button {
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+  padding: 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.trash-button:hover {
+  background-color: firebrick;
+  color: var(--secondary-color);
+}
+
+.complete-button:hover {
+  background-color: greenyellow;
+  color: var(--secondary-color);
+}
+
+.notes-button:hover {
+  background-color: var(--active-color);
+  color: var(--secondary-color);
+}
+
+th,
+td {
+  padding: 0 1rem 0 1rem;
+  min-width: 5rem;
+  max-width: 20rem;
+  text-align: center;
+}
+
+th {
+  position: sticky;
+}
+tr:nth-child(even) {
+  background-color: var(--primary-color);
+}
+
+tr:nth-child(odd),
+#header {
+  background-color: var(--alt-primary);
+}

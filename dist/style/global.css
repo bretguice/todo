@@ -1,0 +1,23 @@
+:root {
+  --primary-color: dodgerblue;
+  --secondary-color: white;
+  --active-color: orange;
+  --alt-primary: rgba(30, 144, 255, 0.7);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  max-height: 100vh;
+  overflow: hidden;
+}
+button.active {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
